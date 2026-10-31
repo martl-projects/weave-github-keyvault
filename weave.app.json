@@ -1,0 +1,9 @@
+{
+  "app": "github-keyvault",
+  "name": "GitHub keyvault",
+  "keyvault": {"platform": "github", "net": ["api.github.com"], "resources": "repositories"},
+  "wasm": {"component": "github-keyvault.wasm"},
+  "env": [
+    {"name": "GITHUB_APP", "label": "Your GitHub App", "register": {"page": "https://github.com/settings/apps/new", "pageFor": "https://github.com/organizations/{owner}/settings/apps/new", "exchange": "https://api.github.com/app-manifests/{code}/conversions", "platform": "github", "manifest": {"name": "{account}'s Weave connect", "url": "https://github.com", "public": false, "default_permissions": {"administration": "write", "contents": "read", "metadata": "read"}, "default_events": []}, "keep": ["id", "slug", "html_url", "owner.login", "permissions"], "key": "pem", "then": "{html_url}/installations/new", "manage": "https://github.com/settings/apps/{slug}/advanced", "manageFor": "https://github.com/organizations/{owner}/settings/apps/{slug}/advanced"}, "hint": "Yours, made once on GitHub: install it on the repositories you hand to projects. An organization's repositories need an app made for that organization (another app). Your services get only short-lived access derived from it"}
+  ]
+}

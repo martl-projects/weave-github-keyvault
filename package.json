@@ -1,0 +1,12 @@
+{
+  "name": "weave-github-keyvault",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "jco componentize src/service.js --wit wit --world-name keyvault --disable fetch-event -o github-keyvault.wasm"
+  },
+  "devDependencies": {
+    "@bytecodealliance/componentize-js": "^0.23.0",
+    "@bytecodealliance/jco": "^1.39.0"
+  }
+}
